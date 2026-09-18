@@ -1,5 +1,36 @@
-import multiprocessing 
-#import os 
+import  asyncio 
+import time 
+
+
+
+
+
+async def worker(name,duration):
+    print(f"when it stated before sleep {name}")
+    await  asyncio.sleep(duration)
+    print(f"final time for the {name}")
+    return name 
+
+
+# *aws [jdjjdjdkdkddkdkdkdkdkdkd]  
+# (worker(name ,duration),woker)
+#mark start time 
+# i/o   url
+
+async def main():
+   start = time.perf_counter()
+   results = await asyncio.gather(worker("A",1),worker("B",1), worker("C",1))
+   print(f"results: {results}")
+   print(f"elapsed: {time.perf_counter() - start:.2f}s  (not 3s!)")
+
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
+
+
+
+
 
 
 
@@ -14,6 +45,11 @@ for _ in names:
     call_name()
 """
 
+
+
+
+
+"""
 
 def sq(q,n):
     q.put((n,n*n))
@@ -34,7 +70,7 @@ if __name__ == "__main__":
         print(f"square({n}) = {sq}")
 
 
-
+"""
 
 
 

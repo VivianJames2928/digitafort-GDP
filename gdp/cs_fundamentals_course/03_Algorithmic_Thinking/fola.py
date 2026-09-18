@@ -1,6 +1,23 @@
+#o(1)
+def one_step(index,data):
+    return data[index]
+
+data = [1,4,7,9,8,11,15]
+
+print(one_step(3,data))
+
+
+
+
+
+
+
+
+
+
+"""
 import time 
 
-# a car 
 class Car :
     #our contruct with all the default data 
     def __init__(self, make , model):
@@ -26,4 +43,4 @@ class Car :
         time.sleep(0.5)
 
      
-    
+""" 
